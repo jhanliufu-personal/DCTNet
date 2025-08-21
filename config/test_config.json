@@ -1,0 +1,24 @@
+{
+  "test_data": {
+    "x_test_path": "data/x_test_raw_nz04_6111595_20221222_8_theta.npy",
+    "y_test_path": "data/y_test_filtered_nz04_6111595_20221222_8_theta.npy"
+  },
+  "models": {
+    "real_model_path": "models/best_model_real.pth",
+    "imag_model_path": "models/best_model_imag.pth"
+  },
+  "normalization_factor": 6453,
+  "batch_size": 64,
+  "seed": 42,
+  "visualization": {
+    "start_idx": 30000,
+    "end_idx": 32000,
+    "sampling_rate": 1500
+  },
+  "echt_params": {
+    "filt_lf": 6,
+    "filt_hf": 9,
+    "sampling_rate": 1500
+  },
+  "headless_plotting": true
+}

@@ -1,0 +1,27 @@
+{
+  "data_download": {
+    "raw_data_url": "https://uchicago.box.com/s/pzrig7bi14ktjy9sl87si43jg3k7ukil",
+    "test_x_url": "https://uchicago.box.com/s/hvihloa9uc02ej9j5hfs1r5w07as6zj5",
+    "test_y_url": "https://uchicago.box.com/s/noa156518fla2g05q1b8bnkw5blgbr1m",
+    "raw_data_filename": "sample_lfp_data_20240513.pkl",
+    "test_x_filename": "x_test_raw_nz04_6111595_20221222_8_theta.npy",
+    "test_y_filename": "y_test_filtered_nz04_6111595_20221222_8_theta.npy"
+  },
+  "extraction": {
+    "input_file": "sample_lfp_data_20240513.pkl",
+    "output_file": "Rodents_Raw_Data.npy",
+    "rodent_index": 0
+  },
+  "processing": {
+    "mode": "Train_Val_Test",
+    "output_dir": "./data",
+    "sampling_rate": 1500,
+    "window_size": 512,
+    "step_size": 1,
+    "lowcut": 6,
+    "highcut": 9,
+    "num_splits": 6,
+    "split_all_factor": 1.0,
+    "split_train_factor": 0.8
+  }
+}

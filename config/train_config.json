@@ -1,0 +1,10 @@
+{
+  "data_dir": "./data",
+  "save_dir": "./models",
+  "training_model": "Both_Parts",
+  "epochs": 1500,
+  "batch_size": 512,
+  "data_fraction": 1.0,
+  "learning_rate": 0.001,
+  "max_grad_norm": 1.0
+}
