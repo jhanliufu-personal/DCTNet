@@ -38,7 +38,8 @@ The script will:
 
 ### 3. Model Training
 
-Train the DCTNN model:
+Train the DCTNN model using the following commands. We recommend training the real and imaginary
+part together (`Both_Parts`).
 
 ```bash
 # Train both real and imaginary parts with default settings
