@@ -34,7 +34,6 @@ The script will:
 - Guide you through downloading the required data files
 - Extract raw data from pickle files
 - Generate train/validation/test datasets
-- Verify all data files are correctly processed
 
 ### 3. Model Training
 

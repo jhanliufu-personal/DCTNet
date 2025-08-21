@@ -1,8 +1,8 @@
 import os
 import json
 import argparse
-import urllib.request
-import subprocess
+# import urllib.request
+# import subprocess
 import sys
 from data.Extract_raw_data_from_pkl import extract_raw_data
 from data.Generate_train_val_test import process_data_split
@@ -59,8 +59,6 @@ class DataPreparator:
         
         print(f"Downloading {filename} from {url}...")
         
-        # Box.com direct download links need special handling
-        # These URLs are shared links, not direct download links
         # Users will need to download manually or provide direct links
         print(f"Please manually download {filename} from:")
         print(f"  {url}")
@@ -190,9 +188,9 @@ class DataPreparator:
                 # Load and check shape
                 try:
                     data = np.load(filepath, mmap_mode='r')
-                    print(f"✓ {filename}: {data.shape}")
+                    print(f"{filename}: {data.shape}")
                 except Exception as e:
-                    print(f"✗ {filename}: Error loading - {e}")
+                    print(f"{filename}: Error loading - {e}")
                     missing_files.append(filename)
         
         if missing_files:
@@ -218,16 +216,16 @@ class DataPreparator:
             
             # Step 4: Verify data
             if self.verify_data():
-                print("\n🎉 Data preparation completed successfully!")
+                print("\n Data preparation completed successfully!")
                 print("\nYou can now run training with:")
                 print("  python Train.py --config config/train_config.json")
                 print("\nOr run testing with:")
                 print("  python Test.py --config config/test_config.json")
             else:
-                print("\n❌ Data preparation completed with errors. Please check the output above.")
+                print("\n Data preparation completed with errors. Please check the output above.")
                 
         except Exception as e:
-            print(f"\n❌ Data preparation failed: {e}")
+            print(f"\n Data preparation failed: {e}")
             raise
 
 
