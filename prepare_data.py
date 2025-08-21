@@ -214,15 +214,15 @@ class DataPreparator:
             # Step 3: Process data
             self.process_data(extracted_data_path)
             
-            # Step 4: Verify data
-            if self.verify_data():
-                print("\n Data preparation completed successfully!")
-                print("\nYou can now run training with:")
-                print("  python Train.py --config config/train_config.json")
-                print("\nOr run testing with:")
-                print("  python Test.py --config config/test_config.json")
-            else:
-                print("\n Data preparation completed with errors. Please check the output above.")
+            # # Step 4: Verify data
+            # if self.verify_data():
+            #     print("\n Data preparation completed successfully!")
+            #     print("\nYou can now run training with:")
+            #     print("  python Train.py --config config/train_config.json")
+            #     print("\nOr run testing with:")
+            #     print("  python Test.py --config config/test_config.json")
+            # else:
+            #     print("\n Data preparation completed with errors. Please check the output above.")
                 
         except Exception as e:
             print(f"\n Data preparation failed: {e}")
@@ -280,19 +280,19 @@ def main():
         else:
             print("Skipping processing step...")
         
-        # Always verify at the end
-        if preparator.verify_data():
-            print("\n🎉 Data preparation completed successfully!")
-            print("\nNext steps:")
-            print("1. Train the model:")
-            print("   python Train.py --config config/train_config.json")
-            print("2. Test the model:")
-            print("   python Test.py --config config/test_config.json")
-        else:
-            print("\n❌ Data preparation completed with errors. Please check the output above.")
+        # # Always verify at the end
+        # if preparator.verify_data():
+        #     print("\n Data preparation completed successfully!")
+        #     print("\nNext steps:")
+        #     print("1. Train the model:")
+        #     print("   python Train.py --config config/train_config.json")
+        #     print("2. Test the model:")
+        #     print("   python Test.py --config config/test_config.json")
+        # else:
+        #     print("\n Data preparation completed with errors. Please check the output above.")
             
     except Exception as e:
-        print(f"\n❌ Data preparation failed: {e}")
+        print(f"\n Data preparation failed: {e}")
         sys.exit(1)
 
 

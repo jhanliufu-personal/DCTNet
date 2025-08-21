@@ -1,0 +1,46 @@
+{
+  "test_data": {
+    "x_test_path": "data/x_test_raw_nz04_6111595_20221222_8_theta.npy",
+    "y_test_path": "data/y_test_filtered_nz04_6111595_20221222_8_theta.npy"
+  },
+  "models": {
+    "dctnn": {
+      "real_model_path": "models/best_model_real.pth",
+      "imag_model_path": "models/best_model_imag.pth"
+    },
+    "mlp": {
+      "real_model_path": "models/best_mlp_real.pth",
+      "imag_model_path": "models/best_mlp_imag.pth"
+    },
+    "mlp_complex": {
+      "model_path": "models/best_mlp_complex.pth"
+    }
+  },
+  "training": {
+    "data_dir": "./data",
+    "save_dir": "./models",
+    "epochs": 500,
+    "batch_size": 512,
+    "learning_rate": 0.001,
+    "data_fraction": 1.0
+  },
+  "mlp_params": {
+    "input_size": 512,
+    "hidden_size": 256,
+    "dropout_rate": 0.2
+  },
+  "echt_params": {
+    "numerator": [0.010364, 0, -0.010364],
+    "denominator": [1.0000, -1.9781, 0.9793],
+    "sampling_rate": 1500
+  },
+  "normalization_factor": 6453,
+  "batch_size": 64,
+  "seed": 42,
+  "visualization": {
+    "start_idx": 30000,
+    "end_idx": 32000,
+    "sampling_rate": 1500
+  },
+  "headless_plotting": true
+}

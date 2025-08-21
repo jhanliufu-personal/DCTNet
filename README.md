@@ -59,13 +59,44 @@ python Test.py --config config/test_config.json
 # This will generate evaluation metrics and visualization plots
 ```
 
-### 5. Configuration
+### 5. Baseline Comparison
+
+To compare DCTNN against baseline methods, first train the baseline models:
+
+```bash
+# Train MLP baseline models (both separate and complex versions)
+python train_baselines.py --config config/baseline_config.json
+
+# Or train with custom parameters
+python train_baselines.py --epochs 500 --batch_size 512 --learning_rate 0.001
+```
+
+Then run the baseline comparison:
+
+```bash
+# Compare all methods (DCTNN, MLP, MLP Complex, ecHT)
+python run_baselines.py --config config/baseline_config.json
+
+# Compare specific methods only
+python run_baselines.py --methods dctnn mlp echt
+
+# Train missing models automatically
+python run_baselines.py --train-missing
+```
+
+This will generate:
+- Comparison metrics (RMSE, MAE, Circular Mean Error)
+- Phase estimation plots for all methods
+- Individual method comparison plots
+
+### 6. Configuration
 
 You can customize training and testing parameters by editing the configuration files in the `config/` directory:
 
 - `config/train_config.json` - Training parameters
 - `config/test_config.json` - Testing parameters  
 - `config/data_prep_config.json` - Data preparation settings
+- `config/baseline_config.json` - Baseline comparison parameters
 
 ---
 

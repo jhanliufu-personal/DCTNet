@@ -4,7 +4,7 @@ import json
 import numpy as np
 import torch
 from torch.utils.data import DataLoader, TensorDataset
-from models.model_POSE_DCTNN9 import DCTNN
+from models.DCTNN import DCTNN
 
 
 class DCTNNTrainer:

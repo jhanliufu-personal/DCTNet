@@ -10,7 +10,7 @@ import random
 from torch.utils.data import DataLoader, TensorDataset
 from scipy.signal import butter, freqz
 from scipy.stats import circmean
-from models.model_POSE_DCTNN9 import DCTNN
+from models.DCTNN import DCTNN
 
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
